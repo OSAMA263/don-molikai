@@ -1,65 +1,96 @@
-import Image from "next/image";
+import BackgroundImg from "@/components/features/bg-img";
+import ProductCard from "@/components/features/product-card";
+import ProductsTabs from "@/components/features/products-tabs";
+import { FaCrown } from "react-icons/fa6";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div>
+      {/* hero */}
+      <BackgroundImg src="hero/HERO_HOME.jpg" className="h-[115dvh]">
+        <div className="font-extrabold pb-20 text-white flex size-full flex-col text-[11rem] leading-none items-center justify-end uppercase">
+          <div className="flex items-center gap-10">
+            <span className="text-2xl! w-1/2 text-center">
+              since <br /> 1987
+            </span>
+            <span>from</span>
+            <span className="text-2xl! w-1/2 text-center">
+              new <br /> tradition
+            </span>
+          </div>
+          <span>navarra</span>
+          <span>to all of spain</span>
+        </div>
+      </BackgroundImg>
+      {/* products */}
+      <section className="space-y-20 w-[60%] mx-auto" id="products">
+        <div className="gap-10 flex text-xl flex-col uppercase items-center justify-center text-center font-extrabold">
+          <span className=" flex-col items-center text-center">
+            <Crown /> <span>the importance of pepper</span>
+          </span>
+          <span>
+            at don molinico we are back. renewed. and we do it while
+            preserving tradition and flavor. from navarra to the
+            world, we come to offer you the best stuffed piquillo
+            peppers you have ever tasted. because we do not have
+            grandma, but we have her recipe.
+          </span>
+        </div>
+        {/* products 3 cards */}
+        <ProductCard link="" img="/home-card-lata.jpg" />
+      </section>
+      {/* new fukcing tradition */}
+      <section id="new tradition">
+        <div className="font-extrabold flex size-full flex-col text-[11rem] leading-none items-center justify-end uppercase">
+          <div className="flex items-center gap-10">
+            <span className="text-2xl! w-1/2 text-center">
+              since <br /> 1987
+            </span>
+            <span>try</span>
+            <span className="text-2xl! w-1/2 text-center">
+              new <br /> tradition
+            </span>
+          </div>
+          <span>the flavor</span>
+          <span>of the new</span>
+          <span>tradition</span>
+        </div>
+        {/*  */}
+        <div className="font-extrabold text-xl text-center">
+          <Crown />
+          <p>
+            come try our stuffed piquillo peppers and discover the
+            best flavor.
+          </p>
+          <p>
+            a range of delicious products ready to eat. do not miss
+            the chance to lick your fingers clean.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+      {/* menu-2 */}
+      <BackgroundImg
+        src="hero/HOME_MAIN_2.jpg"
+        className="h-dvh sticky top-0"
+      >
+        <div className="font-extrabold text-white flex size-full flex-col text-8xl leading-none items-center justify-center uppercase">
+          <span>new</span>
+          <span>tradition</span>
+          <Crown className="mt-10 mb-10 text-white text-6xl" />
+          <span>for</span>
+          <span>snacking</span>
         </div>
-      </main>
+      </BackgroundImg>
+      {/* products tabs */}
+      <ProductsTabs/>
     </div>
+  );
+}
+
+function Crown({ className }: { className?: string }) {
+  return (
+    <FaCrown
+      className={`flex justify-self-center text-red text-3xl mb-4 ${className ?? ""}`}
+    />
   );
 }
