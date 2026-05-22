@@ -1,7 +1,8 @@
-import BackgroundImg from "@/components/features/bg-img";
-import ProductCard from "@/components/features/product-card";
-import ProductsTabs from "@/components/features/products-tabs";
+import BackgroundImg from "@/components/ui/bg-img";
+import ProductCard from "@/components/features/home/product-card";
+import ProductsViewSection from "@/components/features/home/products-view-seciton";
 import { FaCrown } from "react-icons/fa6";
+import SlideChar from "@/components/animations/slide-letters";
 
 export default function Home() {
   return (
@@ -26,7 +27,7 @@ export default function Home() {
       <section className="space-y-20 w-[60%] mx-auto" id="products">
         <div className="gap-10 flex text-xl flex-col uppercase items-center justify-center text-center font-extrabold">
           <span className=" flex-col items-center text-center">
-            <Crown /> <span>the importance of pepper</span>
+            <Crown /><SlideChar line="cock asdasd asdas"/> <span>the importance of pepper</span>
           </span>
           <span>
             at don molinico we are back. renewed. and we do it while
@@ -82,7 +83,7 @@ export default function Home() {
         </div>
       </BackgroundImg>
       {/* products tabs */}
-      <ProductsTabs/>
+      <ProductsViewSection />
     </div>
   );
 }
