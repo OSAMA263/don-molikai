@@ -20,7 +20,10 @@ export default function ProductTab({
       {arr.map(({ name }, i) => (
         <Fragment key={name}>
           <MainBtn
-            onClick={() => handleClick(name)}
+            onClick={() => {
+              handleClick(name);
+              console.log("ddddddd");
+            }}
             className={`border-b ${productType && productType !== name ? "border-transparent" : item && item !== name ? "border-transparent" : ""}`}
           >
             {name}

@@ -3,10 +3,10 @@ export default function Container({
   className,
 }: {
   children: React.ReactNode;
-  className: string;
+  className?: string;
 }) {
   return (
-    <div className={`w-[80%] mx-auto ${className ?? ""}`}>
+    <div className={`space-y-20 ${className ?? ""}`}>
       {children}
     </div>
   );

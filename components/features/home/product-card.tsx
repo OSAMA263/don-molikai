@@ -1,26 +1,39 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function ProductCard({
   link,
   img,
   className,
+  ...rest
 }: {
   link: string;
   img: string;
   className?: string;
 }) {
   return (
-    <div
-      className={`w-fit h-[60dvh] rounded-4xl overflow-hidden hover:scale-110 transition-all duration-500 ${className ?? ""}`}
+    <motion.div
+      transition={{ duration: 0.6, delay: 0 }}
+      viewport={{ once: false, amount: 0.4 }}
+      {...rest}
+      className={`w-fit absolute h-[60dvh] rounded-4xl overflow-hidden  ${className ?? ""}`}
     >
       <Link
-        className="size-full"
+        className="size-full inline-block"
         href={link}
         aria-label="products link"
       >
-        <Image src={img} width={380} height={200} alt={link} />
+        <Image
+          src={img}
+          width={380}
+          height={200}
+          className="object-cover size-full"
+          alt={link}
+        />
       </Link>
-    </div>
+    </motion.div>
   );
 }

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import ProductTab from "./product-tab";
 import { useProductsTab } from "./useProductsTab";
+import SlideLine from "@/components/animations/slide-line";
 
 export default function ProductsViewSection() {
   const {
@@ -23,9 +24,9 @@ export default function ProductsViewSection() {
       }}
     >
       {/* BACKGROUND TEXT */}
-      <div className="size-full flex items-center justify-center flex-col absolute -z-1 text-[11rem] font-extrabold leading-none">
-        <span>piquillo</span>
-        <span>peppers</span>
+      <div className="size-full flex items-center justify-center flex-col absolute -z-1 text-[12rem] font-extrabold leading-none">
+        <SlideLine>piquillo</SlideLine>
+        <SlideLine>peppers</SlideLine>
       </div>
 
       {/* TABS */}
@@ -38,7 +39,11 @@ export default function ProductsViewSection() {
         />
 
         {/* ITEM IMAGE */}
-        <ProductImg img={selectedProduct!.img} item={item} />
+        <ProductImg
+          img={selectedProduct!.img}
+          link={selectedProduct!.id}
+          item={item}
+        />
 
         {/* BOTTOM TABS BUTTONS */}
         <ProductTab
@@ -54,7 +59,15 @@ export default function ProductsViewSection() {
   );
 }
 
-const ProductImg = ({ img, item }: { img: string; item: string }) => {
+const ProductImg = ({
+  img,
+  item,
+  link,
+}: {
+  img: string;
+  item: string;
+  link: string;
+}) => {
   return (
     <AnimatePresence mode="popLayout">
       <motion.div
@@ -63,14 +76,14 @@ const ProductImg = ({ img, item }: { img: string; item: string }) => {
         animate={{ x: "0vw" }}
         exit={{ x: "-100vw" }}
         transition={{ duration: 0.4 }}
-        className="min-h-100"
+        className="min-h-130"
       >
         <Link
-          href=""
-          className="hover:[&>img]:-rotate-12 hover:[&>img]:scale-104"
+          href={"/products/" + link}
+          className="hover:[&>img]:-rotate-8 hover:[&>img]:scale-109"
         >
           <Image
-            width={400}
+            width={500}
             height={100}
             alt={item}
             src={img}

@@ -4,6 +4,7 @@
   --color-gold: #cba058;
 }
 html {
+  scroll-behavior: smooth;
   body {
     font-weight: 600;
     font-family: sans-serif;
