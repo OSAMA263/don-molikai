@@ -3,18 +3,46 @@
   --color-red: #d70321;
   --color-gold: #cba058;
 }
-html {
-  scroll-behavior: smooth;
-  body {
-    font-weight: 600;
-    font-family: sans-serif;
-    a,
-    button {
-      cursor: pointer;
-    }
-    textarea,
-    input,
-    select {
-    }
+
+body {
+  font-family: "Barlow", sans-serif;
+  ::selection {
+    color: var(--color-red); 
+     background-color: var(--color-gold); 
   }
+  font-weight: 600;
+  a,
+  button {
+    cursor: pointer;
+  }
+  textarea,
+  input,
+  select {
+    transition: all 0.4s;
+  }
+}
+
+@utility flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* smooth scrolling in browser page */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
 }

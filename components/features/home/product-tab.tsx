@@ -1,4 +1,4 @@
-import { Crown } from "@/components/ui/Logo";
+import { Crown } from "@/components/ui/navbar/Logo";
 import MainBtn from "@/components/ui/main-button";
 import { Fragment } from "react/jsx-runtime";
 
@@ -16,13 +16,12 @@ export default function ProductTab({
   item,
 }: PropsTypes) {
   return (
-    <div className="flex items-center gap-10 text-2xl">
+    <div className="flex items-center gap-15 text-2xl">
       {arr.map(({ name }, i) => (
         <Fragment key={name}>
           <MainBtn
             onClick={() => {
               handleClick(name);
-              console.log("ddddddd");
             }}
             className={`border-b ${productType && productType !== name ? "border-transparent" : item && item !== name ? "border-transparent" : ""}`}
           >

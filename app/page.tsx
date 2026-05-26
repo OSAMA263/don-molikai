@@ -6,13 +6,9 @@ import SlideLine from "@/components/animations/slide-line";
 import { PRODUCTS_3_CARDS } from "@/data/products-3-cards";
 import HeroTextAnimated from "@/components/features/home/hero-text-sliding-aniamtion";
 import SlideChar from "@/components/animations/slide-letters";
-import { Crown } from "@/components/ui/Logo";
+import { Crown } from "@/components/ui/navbar/Logo";
 
-// rest of the home page
-// header
 export default function Home() {
-
-
   return (
     <Container>
       {/* HERO SECTION */}
@@ -111,7 +107,7 @@ export default function Home() {
         </div>
       </BackgroundImg>
       {/* products tabs */}
-      <ProductsViewSection  />
+      <ProductsViewSection />
     </Container>
   );
 }
