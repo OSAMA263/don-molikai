@@ -3,10 +3,10 @@ import ProductCard from "@/components/features/home/product-card";
 import ProductsViewSection from "@/components/features/home/products-view-seciton";
 import Container from "@/components/layout/container";
 import SlideLine from "@/components/animations/slide-line";
-import { PRODUCTS_3_CARDS } from "@/data/products-3-cards";
+import { PRODUCTS_3_CARDS } from "@/data/homepage-products-3-cards";
 import HeroTextAnimated from "@/components/features/home/hero-text-sliding-aniamtion";
 import SlideChar from "@/components/animations/slide-letters";
-import { Crown } from "@/components/ui/navbar/Logo";
+import { Crown } from "@/components/ui/navbar/logo";
 
 export default function Home() {
   return (

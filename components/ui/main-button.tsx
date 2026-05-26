@@ -15,12 +15,10 @@ export default function MainBtn({
   return (
     <Component
       {...rest}
-      className={`relative transition-all duration-300 overflow-hidden hover:[&>.first]:-translate-y-full hover:[&>.sec]:-translate-y-full [&_span]:size-full [&_span]:transition-all [&_span]:duration-500 ${className ?? ""}`}
+      className={`relative block transition-all duration-300 overflow-hidden hover:[&>.first]:-translate-y-full hover:[&>.sec]:-translate-y-full [&_span]:size-full [&_span]:transition-all [&_span]:duration-500 ${className ?? ""}`}
     >
-      <span  className="first block">{children}</span>
-      <span  className="sec absolute left-0">
-        {children}
-      </span>
+      <span className="first block">{children}</span>
+      <span className="sec absolute left-0">{children}</span>
     </Component>
   );
 }

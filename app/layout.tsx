@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/layout/header";
 import SmoothScroll from "@/components/layout/smooth-scroll";
+import Footer from "@/components/layout/footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,9 +18,12 @@ export default function RootLayout({
     <html lang="en" className={`h-full`}>
       <body className="min-h-full text-red">
         <Header />
+
         <SmoothScroll>
           <main>{children}</main>
         </SmoothScroll>
+
+        <Footer />
       </body>
     </html>
   );

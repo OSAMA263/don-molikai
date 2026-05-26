@@ -15,7 +15,7 @@ export default function SlideLine({
         initial={{ y: "100%" }}
         whileInView={{ y: 0 }}
         transition={{ duration: 0.6 }}
-        viewport={{ once: false }}
+        viewport={{ once: true }}
       >
         {children}
       </motion.div>

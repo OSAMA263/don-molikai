@@ -1,4 +1,4 @@
-import { Crown } from "@/components/ui/navbar/Logo";
+import { Crown } from "@/components/ui/navbar/logo";
 import MainBtn from "@/components/ui/main-button";
 import { Fragment } from "react/jsx-runtime";
 
