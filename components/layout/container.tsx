@@ -6,7 +6,7 @@ export default function Container({
   className?: string;
 }) {
   return (
-    <div className={`space-y-20 ${className ?? ""}`}>
+    <div className={`space-y-20 min-h-dvh ${className ?? ""}`}>
       {children}
     </div>
   );

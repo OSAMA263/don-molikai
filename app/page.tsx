@@ -14,7 +14,7 @@ export default function Home() {
       {/* HERO SECTION */}
       <BackgroundImg
         delayScale={0.5}
-        src="hero/HERO_HOME.jpg"
+        src="/hero/HERO_HOME.jpg"
         className="h-dvh"
       >
         <HeroTextAnimated
@@ -92,7 +92,7 @@ export default function Home() {
 
       {/* BG IMAGE SECTION 2 */}
       <BackgroundImg
-        src="hero/HOME_MAIN_2.jpg"
+        src="/hero/HOME_MAIN_2.jpg"
         className="h-dvh sticky top-0"
       >
         <div className="font-extrabold text-white flex size-full flex-col text-8xl leading-none items-center justify-center uppercase">

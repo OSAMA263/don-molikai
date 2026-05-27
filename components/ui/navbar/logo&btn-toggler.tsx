@@ -18,7 +18,6 @@ export default function Logo_NavBtn() {
       onMouseLeave={() =>
         !showSlider && disableAnimation && setShrinkLogo(true)
       }
-      layout
       initial={{
         top: "100vh",
         width: 120,
@@ -34,7 +33,7 @@ export default function Logo_NavBtn() {
           duration: 1.9,
           times: [0, 0.3, 0.7, 1],
           ease: "easeInOut",
-          delay: 0.4,
+          delay: 0.5,
         },
         width: {
           duration: 0.5,

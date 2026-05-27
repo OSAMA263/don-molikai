@@ -15,7 +15,7 @@ export default function ProductCard({
   return (
     <motion.div
       transition={{ duration: 0.6, delay: 0 }}
-      viewport={{ once: false, amount: 0.4 }}
+      viewport={{ once: true, amount: 0.7 }}
       {...rest}
       className={`w-fit absolute h-[60dvh] rounded-4xl overflow-hidden  ${className ?? ""}`}
     >
