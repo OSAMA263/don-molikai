@@ -14,6 +14,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+    // maybe we can make the loading page to shrink on the same location behind the logo?i think animate to full, initall w,h 120 then exit same as initial
+  // with that willmake sure it looks like the navbar closing on page loading content?
   return (
     <html lang="en" className={`h-full`}>
       <body className="min-h-full text-red">

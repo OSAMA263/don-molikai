@@ -5,12 +5,10 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function ProductCard({
-  link,
   img,
   className,
   ...rest
 }: {
-  link: string;
   img: string;
   className?: string;
 }) {
@@ -23,7 +21,7 @@ export default function ProductCard({
     >
       <Link
         className="size-full inline-block"
-        href={link}
+        href={"/products"}
         aria-label="products link"
       >
         <Image
@@ -31,7 +29,7 @@ export default function ProductCard({
           width={380}
           height={200}
           className="object-cover size-full"
-          alt={link}
+          alt={"product card"}
         />
       </Link>
     </motion.div>

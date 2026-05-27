@@ -4,11 +4,15 @@
   --color-gold: #cba058;
 }
 
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
 body {
   font-family: "Barlow", sans-serif;
   ::selection {
-    color: var(--color-red); 
-     background-color: var(--color-gold); 
+    color: var(--color-red);
+    background-color: var(--color-gold);
   }
   font-weight: 600;
   a,

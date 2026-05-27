@@ -7,10 +7,23 @@ import { NAV_LINKS } from "@/data/nav-links";
 import MainBtn from "../main-button";
 import { usePathname } from "next/navigation";
 import { Crown } from "./logo";
+import { useEffect } from "react";
 
 export default function NavigationBar() {
-  const { showSlider } = useNavbarContext();
+  const { showSlider, setShowSlider, setShrinkLogo } =
+    useNavbarContext();
   const pathname = usePathname();
+
+  // close navlinks slider on navigating
+  useEffect(() => {
+    setShowSlider(false);
+    setShrinkLogo(false);
+    const timer = setTimeout(() => {
+      setShrinkLogo(true);
+    }, 2500);
+
+    return () => clearTimeout(timer);
+  }, [pathname, setShowSlider, setShrinkLogo]);
 
   return (
     <div className="flex justify-between w-[98vw] *:flex *:pt-5 *:gap-6 text-4xl uppercase">
@@ -19,7 +32,7 @@ export default function NavigationBar() {
         <div>
           {NAV_LINKS.slice(0, 2).map(({ url, label }) => (
             <MainBtn
-              className={url == pathname ? "border-b" : ""}
+              className={`border-b ${url == pathname ? "border-gold" : "border-transparent"}`}
               as="a"
               key={url}
               href={url}
@@ -31,7 +44,7 @@ export default function NavigationBar() {
         <div>
           {NAV_LINKS.slice(2, 4).map(({ url, label }) => (
             <MainBtn
-              className={url == pathname ? "border-b" : ""}
+              className={`border-b ${url == pathname ? "border-gold" : "border-transparent"}`}
               as="a"
               key={url}
               href={url}

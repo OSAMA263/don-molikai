@@ -26,12 +26,11 @@ export default function NavbarProvider({
   const [shrinkLogo, setShrinkLogo] = useState(false);
   const [showSlider, setShowSlider] = useState(false);
 
-  // disable scroll, hover aniamtion until the first animtion ends
   useEffect(() => {
+    // disable scroll, hover logo aniamtion until the first animtion ends
     const timer = setTimeout(() => {
       setDisableAnimation(true);
-      setShrinkLogo(true);
-    }, 3200);
+    }, 2600);
 
     return () => clearTimeout(timer);
   }, []);

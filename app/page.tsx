@@ -12,7 +12,11 @@ export default function Home() {
   return (
     <Container>
       {/* HERO SECTION */}
-      <BackgroundImg src="hero/HERO_HOME.jpg" className="h-dvh">
+      <BackgroundImg
+        delayScale={0.5}
+        src="hero/HERO_HOME.jpg"
+        className="h-dvh"
+      >
         <HeroTextAnimated
           className="justify-end text-white pb-20"
           centerText="from"
@@ -56,7 +60,6 @@ export default function Home() {
                 i == 0 ? "-translate-x-1/2" : "translate-x-1/2"
               }
               {...rest}
-              link="/products"
               img={img}
             />
           ))}
