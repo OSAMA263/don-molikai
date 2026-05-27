@@ -10,8 +10,12 @@ import { Crown } from "./logo";
 import { useEffect } from "react";
 
 export default function NavigationBar() {
-  const { showSlider, setShowSlider, setShrinkLogo } =
-    useNavbarContext();
+  const {
+    showSlider,
+    setShowSlider,
+    setShrinkLogo,
+    disableAnimation,
+  } = useNavbarContext();
   const pathname = usePathname();
 
   // close navlinks slider on navigating
@@ -60,12 +64,21 @@ export default function NavigationBar() {
         initial={{ width: "100dvw", height: "100dvh" }}
         animate={{ width: 120, height: 120 }}
         transition={{
-          duration: 1.2,
+          duration: 1.3,
           ease: [0.6, 0, 0.17, 0.88],
-          delay: 2.2,
+          delay: 1.6,
         }}
         className={`flex-center justify-end pb-10 duration-1200 fixed top-0 z-50 left-1/2 -translate-x-1/2 ease-[cubic-bezier(0.60,0,0.17,0.88)] bg-red ${showSlider ? "w-dvw! h-dvh!" : "w-30 h-30"}`}
       >
+        {/* smol loading logo */}
+        {!disableAnimation && (
+          <div
+            className={`size-10 absolute top-1/2 -transalte-y-1/2 animate-pulse`}
+          >
+            <Crown className="text-gold!" />
+          </div>
+        )}
+
         <SliderNavLinks {...{ showSlider, pathname }} />
       </motion.div>
 

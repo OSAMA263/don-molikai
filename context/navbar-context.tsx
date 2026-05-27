@@ -30,7 +30,7 @@ export default function NavbarProvider({
     // disable scroll, hover logo aniamtion until the first animtion ends
     const timer = setTimeout(() => {
       setDisableAnimation(true);
-    }, 2600);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);

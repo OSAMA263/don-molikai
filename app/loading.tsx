@@ -1,5 +1,9 @@
+import { Crown } from "@/components/ui/navbar/logo";
+
 export default function Loading() {
   return (
-    <div>loading</div>
-  )
+    <div className="flex-center w-full h-dvh bg-red">
+      <Crown className="text-gold! animate-pulse" />
+    </div>
+  );
 }
