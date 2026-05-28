@@ -1,4 +1,4 @@
-import BackgroundImg from "@/components/ui/bg-img";
+import ViewPortSection from "@/components/ui/full-view-section";
 import ProductCard from "@/components/features/home/product-card";
 import ProductsViewSection from "@/components/features/home/products-view-seciton";
 import Container from "@/components/layout/container";
@@ -12,10 +12,10 @@ export default function Home() {
   return (
     <Container>
       {/* HERO SECTION */}
-      <BackgroundImg
+      <ViewPortSection
         delayScale={0.5}
         src="/hero/HERO_HOME.jpg"
-        className="h-dvh"
+        className="relative!"
       >
         <HeroTextAnimated
           className="justify-end text-white pb-20"
@@ -25,7 +25,7 @@ export default function Home() {
           par="navarra to all of spain"
           stagger
         />
-      </BackgroundImg>
+      </ViewPortSection>
 
       {/* PRODUCTS 3 CARDS */}
       <section
@@ -39,7 +39,7 @@ export default function Home() {
           </span>
           <div>
             <SlideLine>
-              at don molinico we are back. renewed. and we do it while
+              at bom milicia we are back. renewed. and we do it while
               preserving tradition and flavor. from navarra to the
               world
             </SlideLine>
@@ -91,10 +91,7 @@ export default function Home() {
       </div>
 
       {/* BG IMAGE SECTION 2 */}
-      <BackgroundImg
-        src="/hero/HOME_MAIN_2.jpg"
-        className="h-dvh sticky top-0"
-      >
+      <ViewPortSection src="/hero/HOME_MAIN_2.jpg">
         <div className="font-extrabold text-white flex size-full flex-col text-8xl leading-none items-center justify-center uppercase">
           <HeroTextAnimated>
             <SlideChar
@@ -108,9 +105,11 @@ export default function Home() {
             />
           </HeroTextAnimated>
         </div>
-      </BackgroundImg>
+      </ViewPortSection>
       {/* products tabs */}
-      <ProductsViewSection />
+      <ViewPortSection overlayOnScroll className="relative!">
+        <ProductsViewSection />
+      </ViewPortSection>
     </Container>
   );
 }

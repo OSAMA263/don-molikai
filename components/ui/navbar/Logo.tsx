@@ -11,7 +11,7 @@ export default function Logo() {
 
   return (
     <Link href="/" className="[&_h2]:text-7xl!">
-      {/* DON */}
+      {/* bom */}
       {/* TOP TEXT IN THE LOGO */}
       <div className=" flex-center flex-row [&>div]:flex-center [&>div]:text-xs [&>div]:leading-none gap-1">
         <div>
@@ -42,7 +42,7 @@ export default function Logo() {
             init={false}
             condation={shrinkLogo}
             y="100%"
-            line="don"
+            line="bom"
           />
         </h2>
         <div>
@@ -67,7 +67,7 @@ export default function Logo() {
         </div>
       </div>
 
-      {/* MOLICIA */}
+      {/* milicia */}
       {/* BOTTOM LINE OF THE LOGO */}
       <h2 className="relative flex items-center">
         {/* MOVING M LETTER */}
@@ -108,7 +108,7 @@ export default function Logo() {
           init={false}
           condation={shrinkLogo}
           y="100%"
-          line="olicia"
+          line="olicaio"
         />
       </h2>
     </Link>
