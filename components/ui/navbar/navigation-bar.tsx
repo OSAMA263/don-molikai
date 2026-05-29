@@ -62,9 +62,9 @@ export default function NavigationBar() {
       {/* FULL VIEWPORT RED BG */}
       <motion.div
         initial={{ width: "100dvw", height: "100dvh" }}
-        animate={{ width: 120, height: 120 }}
+        animate={{ width: 120, height: 100 }}
         transition={{
-          duration: 1.3,
+          duration: 1.2,
           ease: [0.6, 0, 0.17, 0.88],
           delay: 1.6,
         }}

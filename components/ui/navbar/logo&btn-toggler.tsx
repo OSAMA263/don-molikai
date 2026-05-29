@@ -31,7 +31,7 @@ export default function Logo_NavBtn() {
       transition={{
         top: {
           duration: 1.9,
-          times: [0, 0.3, 0.7, 1],
+          times: [0, 0.3, 0.6, 1],
           ease: "easeInOut",
           delay: 0.5,
         },

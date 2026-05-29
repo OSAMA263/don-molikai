@@ -31,7 +31,7 @@ export default function SlideChar(props: PropsTypes) {
 
   return (
     <div
-      className={`flex items-center flex-wrap justify-center ${className ?? ""}`}
+      className={`flex items-center flex-wrap uppercase font-extrabold justify-center ${className ?? ""}`}
     >
       {line.split(" ").map((word, i, arr) => (
         <Fragment key={i}>

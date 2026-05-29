@@ -9,7 +9,7 @@ export default function Container({
 }) {
   return (
     <div
-      className={`space-y-24 mx-auto ${className ?? ""} ${widthCap ? "2xl:w-[82%] xl:w-[90%] w-[98%]" : ""}`}
+      className={`space-y-24 mx-auto ${className ?? ""} ${widthCap ? "2xl:w-[75%] xl:w-[82%] w-[98%]" : ""}`}
     >
       {children}
     </div>

@@ -1,3 +1,4 @@
+import LargeText from "@/components/ui/large-text";
 import SlideChar from "../../animations/slide-letters";
 
 type propsTpypes = {
@@ -40,7 +41,7 @@ export default function HeroTextAnimated(props: propsTpypes) {
               />
             </div>
 
-            <SlideChar line={centerText ?? ""} />
+            <LargeText line={centerText ?? ""} />
 
             <div className="text-2xl!">
               <SlideChar
@@ -51,7 +52,7 @@ export default function HeroTextAnimated(props: propsTpypes) {
               />
             </div>
           </div>
-          <SlideChar delay={stagger ? 0.6 : 0} line={par ?? ""} />
+          <LargeText delay={stagger ? 0.6 : 0} line={par ?? ""} />
         </>
       )}
     </div>
