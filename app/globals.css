@@ -2,6 +2,8 @@
 @theme {
   --color-red: #d70321;
   --color-gold: #cba058;
+  --color-green: #5a6420;
+  --color-sky: #bdc5e9;
 }
 
 html::-webkit-scrollbar,

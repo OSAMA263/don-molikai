@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import {
   useContext,
   useState,
@@ -26,6 +27,8 @@ export default function NavbarProvider({
   const [shrinkLogo, setShrinkLogo] = useState(false);
   const [showSlider, setShowSlider] = useState(false);
 
+  const pathname = usePathname();
+
   useEffect(() => {
     // disable scroll, hover logo aniamtion until the first animtion ends
     const timer = setTimeout(() => {
@@ -35,6 +38,10 @@ export default function NavbarProvider({
     return () => clearTimeout(timer);
   }, []);
 
+  // scrollto the top of the page on navitaion
+  useEffect(() => {
+    window.scrollTo({ top: 0,  });
+  }, [pathname]);
   return (
     <NavbarContext.Provider
       value={{

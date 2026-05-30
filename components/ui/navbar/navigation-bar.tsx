@@ -36,7 +36,7 @@ export default function NavigationBar() {
         <div>
           {NAV_LINKS.slice(0, 2).map(({ url, label }) => (
             <MainBtn
-              className={`border-b ${url == pathname ? "border-gold" : "border-transparent"}`}
+              className={`border-b text-xl! ${url == pathname ? "border-gold" : "border-transparent"}`}
               as="a"
               key={url}
               href={url}
@@ -48,7 +48,7 @@ export default function NavigationBar() {
         <div>
           {NAV_LINKS.slice(2, 4).map(({ url, label }) => (
             <MainBtn
-              className={`border-b ${url == pathname ? "border-gold" : "border-transparent"}`}
+              className={`border-b text-xl! ${url == pathname ? "border-gold" : "border-transparent"}`}
               as="a"
               key={url}
               href={url}
