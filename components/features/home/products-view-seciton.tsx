@@ -20,7 +20,7 @@ export default function ProductsViewSection() {
     <div
       className="h-dvh overflow-x-hidden **:uppercase sticky top-0 transition-all duration-500"
       style={{
-        backgroundColor: selectedProduct?.color,
+        backgroundColor: selectedProduct?.bg,
       }}
     >
       {/* BACKGROUND TEXT */}
