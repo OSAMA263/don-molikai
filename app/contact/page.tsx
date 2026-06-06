@@ -9,10 +9,8 @@ export default function Contact() {
     <Container widthCap className="uppercase font-extrabold">
       <ViewPortSection
         src="/contact.jpg"
-        className="w-[60vw]! h-[90vh]! rounded-2xl overflow-hidden relative! mx-auto mt-20"
-      >
-        {" "}
-      </ViewPortSection>
+        className="w-[70vw]! min-h-[80vh]! h-[80vh]! rounded-2xl overflow-hidden relative! mx-auto mt-20"
+      />
 
       {/* CONTACT INFORMATION */}
       <div className="flex-center gap-16">
@@ -20,7 +18,7 @@ export default function Contact() {
         <SlideLine className="text-center text-2xl w-[80%] mx-auto">
           write to us. whether you have questions, curiosity, or just
           want to say hello. we check the spam folder every morning,
-          so do not worry, at don molinico there is no lost mail.
+          so do not worry, at bommolinico there is no lost mail.
         </SlideLine>
         <MainBtn
           href="mailto:osamaelseify2@gmail.com"

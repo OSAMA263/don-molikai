@@ -1,7 +1,7 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import { useRef } from "react";
+import { CSSProperties, useRef } from "react";
 
 const MotionImage = motion.create(Image);
 export default function ViewPortSection({
@@ -10,12 +10,14 @@ export default function ViewPortSection({
   className,
   delayScale,
   overlayOnScroll = false,
+  style,
 }: {
   src?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
   delayScale?: number;
   overlayOnScroll?: boolean;
+  style?: CSSProperties;
 }) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
@@ -27,6 +29,7 @@ export default function ViewPortSection({
   return (
     <>
       <div
+        style={style}
         ref={containerRef}
         className={`min-h-dvh ${src ? "h-dvh" : "h-full"} top-0 sticky ${className ?? ""}`}
       >
@@ -38,7 +41,10 @@ export default function ViewPortSection({
         )}
 
         {/*  image and text content */}
-        <div className={`overflow-hidden relative h-full`} id="wrapper">
+        <div
+          className={`overflow-hidden relative h-full`}
+          id="wrapper"
+        >
           {children}
           {src && (
             <MotionImage

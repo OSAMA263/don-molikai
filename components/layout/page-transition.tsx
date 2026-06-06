@@ -1,13 +1,19 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 
-export default function Template({
+export default function PageTransition({
   children,
 }: {
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
+
+  // scrollto the top of the page on navitaion
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, [pathname]);
 
   return (
     <>

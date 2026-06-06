@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { motion } from "framer-motion";
 
 export default function SlideLine({
@@ -11,7 +11,7 @@ export default function SlideLine({
   return (
     <div className="overflow-hidden">
       <motion.div
-        className={className ?? ""}
+        className={`uppercase font-extrabold ${className ?? ""}`}
         initial={{ y: "100%" }}
         whileInView={{ y: 0 }}
         transition={{ duration: 0.6 }}

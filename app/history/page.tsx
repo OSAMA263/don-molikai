@@ -4,8 +4,10 @@ import HeroTextAnimated from "@/components/features/home/hero-text-sliding-aniam
 import Container from "@/components/layout/container";
 import ViewPortSection from "@/components/ui/full-view-section";
 import { HISTORY_DATA } from "@/data/history-data";
+import { ALL_PRODUCTS } from "@/data/products";
 
 export default function History() {
+
   return (
     <Container>
       <ViewPortSection
@@ -56,7 +58,7 @@ export default function History() {
             {i == HISTORY_DATA.length - 1 && (
               <>
                 {/* SCROLL X ON MOUSE MOVE */}
-                <ScrollXOnMouseMove className="pt-0!" />
+                <ScrollXOnMouseMove arr={ALL_PRODUCTS} className="pt-0!" />
               </>
             )}
           </ViewPortSection>

@@ -33,7 +33,7 @@ export default function Home() {
         id="products-cards"
       >
         <div className="gap-10 flex text-xl flex-col uppercase items-center justify-center text-center font-extrabold">
-          <span className=" flex-col items-center text-center">
+          <span className="flex-col items-center text-center">
             <Crown />
             <SlideLine>the importance of pepper</SlideLine>
           </span>

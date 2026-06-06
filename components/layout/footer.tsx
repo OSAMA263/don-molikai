@@ -59,7 +59,7 @@ export default function Footer() {
       <div className="grid grid-cols-2 w-1/2 mx-auto gap-20 border-y py-10">
         {SPONSORS.map(({ img, label }) => (
           <div className="flex-center gap-5" key={label}>
-            <Image width={100} height={100} src={img} alt={img} />
+            <Image className="size-auto" width={100} height={100} src={img} alt={img} />
             <SlideLine className="text-sm text-center">
               {label}
             </SlideLine>

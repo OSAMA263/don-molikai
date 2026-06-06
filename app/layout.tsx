@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/layout/header";
 import SmoothScroll from "@/components/layout/smooth-scroll";
 import Footer from "@/components/layout/footer";
+import PageTransition from "@/components/layout/page-transition";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,7 +21,9 @@ export default function RootLayout({
         <Header />
 
         <SmoothScroll>
-          <main>{children}</main>
+          <PageTransition>
+            <main>{children}</main>
+          </PageTransition>
         </SmoothScroll>
 
         <Footer />

@@ -1,13 +1,15 @@
 "use client";
 
-import { ALL_PRODUCTS } from "@/data/products";
 import { motion, useMotionValue } from "framer-motion";
 import { useRef } from "react";
 import ProductAnimatedBG from "../products/product-animated-bg";
+import { ProductType } from "@/data/products";
 
 export default function ScrollXOnMouseMove({
   className,
+  arr,
 }: {
+  arr: ProductType[] | undefined;
   className?: string;
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -39,7 +41,7 @@ export default function ScrollXOnMouseMove({
         ref={sliderRef}
         className="relative flex gap-10 w-max transition-all duration-500 ease-linear px-10"
       >
-        {ALL_PRODUCTS.map((pro) => (
+        {arr?.map((pro) => (
           <ProductAnimatedBG key={pro.id} {...pro} />
         ))}
       </motion.div>

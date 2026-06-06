@@ -87,7 +87,7 @@ const ProductImg = ({
             height={100}
             alt={item}
             src={img}
-            className="transition-all duration-500"
+            className="transition-all duration-500 h-130 w-auto"
           />
         </Link>
       </motion.div>

@@ -18,7 +18,7 @@ export const HISTORY_DATA: HistoryTypes = [
     textColor: "text-gold!",
     centerText: "this",
     lines: [
-      "jesis mari saenz, founder of don molinico, has been connected to the world of canned goods since the age of 15. after gaining experience working in a factory, the idea of creating his own company emerged. in 1987 he founded precomar, the parent company of don molinico. the name comes from the molinico stream, located next to the castle of marcilla. its iconic red color pays tribute to the rich cultural tradition of navarra.",
+      "jesis mari saenz, founder of bommolinico, has been connected to the world of canned goods since the age of 15. after gaining experience working in a factory, the idea of creating his own company emerged. in 1987 he founded precomar, the parent company of bommolinico. the name comes from the molinico stream, located next to the castle of marcilla. its iconic red color pays tribute to the rich cultural tradition of navarra.",
     ],
   },
   {
@@ -35,7 +35,7 @@ export const HISTORY_DATA: HistoryTypes = [
       "n an era when pre-cooked dishes were not common, jesús mari saenz, along with two friends, decided to revolutionize the market.in an era when pre-cooked dishes were not common, jesús mari saenz, along with two friends, decided to revolutionize the market. the idea arose from the need to simplify people's lives, offering ready-to-eat prepared dishes. this innovative vision marked the beginning of a family tradition centered on quality and service.",
       "piquillo stuffed peppers are a tradition in navarra, where it was customary for families to gather around the table and enjoy grandmother's recipes.",
       "this beloved tradition inspired jesús mari saenz to embark on his journey of creating pre-cooked dishes. he recognizes the importance of preserving this cultural heritage, while adapting to the modern lifestyle",
-      "with dedication and innovation, don molinico has not only honored the navarrese culinary legacy, but has also become synonymous with excellence in the industry. a commitment to tradition, quality and the joy of sharing delicious meals.",
+      "with dedication and innovation, bommolinico has not only honored the navarrese culinary legacy, but has also become synonymous with excellence in the industry. a commitment to tradition, quality and the joy of sharing delicious meals.",
     ],
   },
   {
@@ -49,8 +49,8 @@ export const HISTORY_DATA: HistoryTypes = [
     par: "growth and expansion",
     centerText: "follow",
     lines: [
-      "from its modest beginnings in a 165m2 factory, don molinico has experienced constant growth. initially focused on the hospitality sector, it soon expanded its offering to include canned and frozen products.",
-      "specialization and commitment to quality have positioned don molinico as an undisputed leader in the sector. its unique focus on stuffed peppers has made it a benchmark for consumers, highlighting its difference in the market.",
+      "from its modest beginnings in a 165m2 factory, bommolinico has experienced constant growth. initially focused on the hospitality sector, it soon expanded its offering to include canned and frozen products.",
+      "specialization and commitment to quality have positioned bommolinico as an undisputed leader in the sector. its unique focus on stuffed peppers has made it a benchmark for consumers, highlighting its difference in the market.",
     ],
   },
   {
@@ -61,7 +61,7 @@ export const HISTORY_DATA: HistoryTypes = [
     par: "innovation continues",
     centerText: "the",
     lines: [
-      "the introduction of the jar of peppers in oil was an important milestone in the history of the company. this idea, conceived by jesús mari and alessio nicolini (current general director of virú ibérica), arose from an initial experiment that seemed to have failed. however, it turned out to be a sensation, demonstrating the innovative spirit of don molinico. this product was born with the ambition of simplifying people's lives, respecting tradition and the past, adapting to our contemporary day-to-day, making life easier for you.",
+      "the introduction of the jar of peppers in oil was an important milestone in the history of the company. this idea, conceived by jesús mari and alessio nicolini (current general director of virú ibérica), arose from an initial experiment that seemed to have failed. however, it turned out to be a sensation, demonstrating the innovative spirit of bommolinico. this product was born with the ambition of simplifying people's lives, respecting tradition and the past, adapting to our contemporary day-to-day, making life easier for you.",
     ],
   },
 ];

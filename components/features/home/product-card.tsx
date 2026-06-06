@@ -28,7 +28,7 @@ export default function ProductCard({
           src={img}
           width={380}
           height={200}
-          className="object-cover size-full"
+          className="object-cover size-auto"
           alt={"product card"}
         />
       </Link>
