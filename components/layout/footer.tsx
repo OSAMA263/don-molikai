@@ -9,8 +9,8 @@ import { SPONSORS } from "@/data/sponsors,";
 import { usePathname } from "next/navigation";
 import { NAV_LINKS } from "@/data/nav-links";
 import { Fragment } from "react/jsx-runtime";
-import { Crown } from "../ui/navbar/logo";
 import Container from "./container";
+import Crown from "../ui/navbar/crown";
 
 export default function Footer() {
   const pathname = usePathname();

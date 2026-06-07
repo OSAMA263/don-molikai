@@ -3,7 +3,7 @@ import HeroTextAnimated from "@/components/features/home/hero-text-sliding-aniam
 import MenuSection from "@/components/features/products/menu-section";
 import Container from "@/components/layout/container";
 import ViewPortSection from "@/components/ui/full-view-section";
-import { Crown } from "@/components/ui/navbar/logo";
+import Crown from "@/components/ui/navbar/crown";
 import { PRODUCTS } from "@/data/products";
 
 export const metadata = {

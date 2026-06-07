@@ -1,6 +1,7 @@
 import SlideLine from "@/components/animations/slide-line";
 import ViewPortSection from "@/components/ui/full-view-section";
-import { Crown } from "@/components/ui/navbar/logo";
+import Crown from "@/components/ui/navbar/crown";
+
 import HeroTextAnimated from "../home/hero-text-sliding-aniamtion";
 import ProductAnimatedBG from "./product-animated-bg";
 import { PRODUCTS, PRODUCTS_SECTIONS } from "@/data/products";

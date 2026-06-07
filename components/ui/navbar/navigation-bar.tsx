@@ -2,12 +2,12 @@
 
 import { useNavbarContext } from "@/context/navbar-context";
 import { motion } from "framer-motion";
-import Logo_NavBtn from "./logo&btn-toggler";
+import Logo_NavBtn from "./logo_btn-toggler";
 import { NAV_LINKS } from "@/data/nav-links";
 import MainBtn from "../main-button";
 import { usePathname } from "next/navigation";
-import { Crown } from "./logo";
 import { useEffect } from "react";
+import Crown from "./crown";
 
 export default function NavigationBar() {
   const {

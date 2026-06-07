@@ -4,7 +4,7 @@ import ActiveProductLink from "@/components/features/products/single-page-active
 import Container from "@/components/layout/container";
 import ViewPortSection from "@/components/ui/full-view-section";
 import LargeText from "@/components/ui/large-text";
-import { Crown } from "@/components/ui/navbar/logo";
+import Crown from "@/components/ui/navbar/crown";
 import { ALL_PRODUCTS } from "@/data/products";
 import Image from "next/image";
 import { notFound } from "next/navigation";

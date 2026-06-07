@@ -6,7 +6,7 @@ import SlideLine from "@/components/animations/slide-line";
 import { PRODUCTS_3_CARDS } from "@/data/homepage-products-3-cards";
 import HeroTextAnimated from "@/components/features/home/hero-text-sliding-aniamtion";
 import SlideChar from "@/components/animations/slide-letters";
-import { Crown } from "@/components/ui/navbar/logo";
+import Crown from "@/components/ui/navbar/crown";
 
 export default function Home() {
   return (

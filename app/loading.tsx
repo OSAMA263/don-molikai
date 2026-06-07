@@ -1,4 +1,4 @@
-import { Crown } from "@/components/ui/navbar/logo";
+import Crown from "@/components/ui/navbar/crown";
 
 export default function Loading() {
   return (

@@ -1,10 +1,10 @@
 "use client";
 
-import { FaCrown } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import SlideChar from "@/components/animations/slide-letters";
 import { useNavbarContext } from "@/context/navbar-context";
+import Crown from "./crown";
 
 export default function Logo() {
   const { shrinkLogo } = useNavbarContext();
@@ -112,13 +112,5 @@ export default function Logo() {
         />
       </h2>
     </Link>
-  );
-}
-
-export function Crown({ className }: { className?: string }) {
-  return (
-    <FaCrown
-      className={`flex justify-self-center text-red text-3xl mb-4 ${className ?? ""}`}
-    />
   );
 }
