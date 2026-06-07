@@ -4,15 +4,13 @@ import { ProductType } from "@/data/products";
 import Image from "next/image";
 import Link from "next/link";
 
-
-
-export default function ProductAnimatedBG(product:ProductType) {
+export default function ProductAnimatedBG(product: ProductType) {
   const { img, bg, color, id } = product;
 
   return (
     <Link
       href={`/products/${id}`}
-      className={`inline-block rounded-4xl p-[12vw] hover:[&>#bg]:scale-90 hover:[&_#img]:-rotate-12 hover:[&_#img]:scale-105! relative overflow-hidden hover:[&_#auto-slider]:opacity-100 hover:[&_#auto-slider]:scale-110!`}
+      className={`inline-block rounded-4xl p-[12vw] max-lg:size-[60vh] max-lg:w-[95vw] hover:[&>#bg]:scale-90 hover:[&_#img]:-rotate-12 hover:[&_#img]:scale-105! relative overflow-hidden hover:[&_#auto-slider]:opacity-100 hover:[&_#auto-slider]:scale-110!`}
     >
       {/* bg color shrink on hover */}
       <div

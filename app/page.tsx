@@ -18,7 +18,7 @@ export default function Home() {
         className="relative!"
       >
         <HeroTextAnimated
-          className="justify-end text-white pb-20"
+          className="sm:justify-end text-white pb-20"
           centerText="from"
           left="since 1987"
           right="new tradition"
@@ -29,17 +29,17 @@ export default function Home() {
 
       {/* PRODUCTS 3 CARDS */}
       <section
-        className="space-y-20 w-[60%] mx-auto"
+        className="space-y-20 2xl:w-[60%] lg:w-[80%] w-[95%] mx-auto"
         id="products-cards"
       >
-        <div className="gap-10 flex text-xl flex-col uppercase items-center justify-center text-center font-extrabold">
+        <div className="gap-10 flex lg:text-xl flex-col uppercase items-center justify-center text-center font-extrabold">
           <span className="flex-col items-center text-center">
             <Crown />
             <SlideLine>the importance of pepper</SlideLine>
           </span>
           <div>
             <SlideLine>
-              at bom milicia we are back. renewed. and we do it while
+              at don milicia we are back. renewed. and we do it while
               preserving tradition and flavor. from navarra to the
               world
             </SlideLine>
@@ -52,13 +52,11 @@ export default function Home() {
         </div>
 
         {/* 3 CARDS */}
-        <div className="min-h-[80vh] relative flex items-center justify-center">
+        <div className="lg:min-h-[80vh] relative flex max-lg:flex-col items-center justify-center">
           {PRODUCTS_3_CARDS.map(({ img, ...rest }, i) => (
             <ProductCard
               key={img}
-              className={
-                i == 0 ? "-translate-x-1/2" : "translate-x-1/2"
-              }
+              i={i}
               {...rest}
               img={img}
             />
@@ -70,7 +68,7 @@ export default function Home() {
       <section id="new-tradition">
         <HeroTextAnimated
           centerText="try"
-          className="w-[70%]!"
+          className="xl:w-[70%]!"
           left="since 1987"
           right="new tradition"
           par="the flavor of the new tradition"
@@ -78,7 +76,7 @@ export default function Home() {
         />
       </section>
       {/*  */}
-      <div className="font-extrabold text-xl text-center">
+      <div className="font-extrabold lg:text-xl text-center">
         <Crown />
         <SlideLine>
           come try our stuffed piquillo peppers and discover the best
@@ -92,17 +90,11 @@ export default function Home() {
 
       {/* BG IMAGE SECTION 2 */}
       <ViewPortSection src="/hero/HOME_MAIN_2.jpg">
-        <div className="font-extrabold text-white flex size-full flex-col text-8xl leading-none items-center justify-center uppercase">
+        <div className="font-extrabold text-white flex size-full flex-col **:xl:text-8xl **:text-4xl leading-none items-center justify-center uppercase">
           <HeroTextAnimated>
-            <SlideChar
-              className="flex-col text-8xl"
-              line="new tradition"
-            />
-            <Crown className="mt-10 mb-10 text-white text-6xl" />
-            <SlideChar
-              className="flex-col text-8xl"
-              line="for snacking"
-            />
+            <SlideChar className="flex-col" line="new tradition" />
+            <Crown className="lg:mt-10 lg:mb-10 mt-4 text-white text-5xl!" />
+            <SlideChar className="flex-col" line="for snacking" />
           </HeroTextAnimated>
         </div>
       </ViewPortSection>

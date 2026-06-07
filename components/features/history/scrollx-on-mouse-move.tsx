@@ -4,6 +4,8 @@ import { motion, useMotionValue } from "framer-motion";
 import { useRef } from "react";
 import ProductAnimatedBG from "../products/product-animated-bg";
 import { ProductType } from "@/data/products";
+import Slider from "../products/small-products-sliding";
+import { useMediaQuery } from "@/hooks/use-media-query";
 
 export default function ScrollXOnMouseMove({
   className,
@@ -12,10 +14,12 @@ export default function ScrollXOnMouseMove({
   arr: ProductType[] | undefined;
   className?: string;
 }) {
+  const isMobile = useMediaQuery("(max-width: 1024px)");
+
   const containerRef = useRef<HTMLDivElement>(null);
   const mouseX = useMotionValue(0);
 
-  // sliding the div on mouse location
+  //  sliding the div on mouse location
   const sliderRef = useRef<HTMLDivElement>(null);
   const handleMouseMove = (e: React.MouseEvent) => {
     const container = containerRef.current!;
@@ -36,15 +40,19 @@ export default function ScrollXOnMouseMove({
       onMouseMove={handleMouseMove}
       className={`w-full overflow-hidden h-full z-55 relative py-20 ${className ?? ""}`}
     >
-      <motion.div
-        style={{ x: mouseX }}
-        ref={sliderRef}
-        className="relative flex gap-10 w-max transition-all duration-500 ease-linear px-10"
-      >
-        {arr?.map((pro) => (
-          <ProductAnimatedBG key={pro.id} {...pro} />
-        ))}
-      </motion.div>
+      {!isMobile ? (
+        <motion.div
+          style={{ x: mouseX }}
+          ref={sliderRef}
+          className="relative flex lg:gap-10 gap-4 w-max transition-all duration-500 ease-linear px-10"
+        >
+          {arr?.map((pro) => (
+            <ProductAnimatedBG key={pro.id} {...pro} />
+          ))}
+        </motion.div>
+      ) : (
+        <Slider arr={arr} />
+      )}
     </div>
   );
 }

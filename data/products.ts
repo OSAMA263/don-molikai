@@ -20,7 +20,7 @@ export const PRODUCTS: AllProductsType[] = [
         name: "salmon",
         img: "/products/Frasco-Salmon.png",
         bg: "#ffc0c5",
-        color: "#cba058",
+        color: "#d70321",
         id: "frasco-salmon",
         food_details:
           "Wild-caught salmon preserved in extra virgin olive oil. Packed with omega-3 fatty acids, vitamin D, and high-quality protein — ideal for heart health and brain function. The flavor is mild, slightly buttery, and gently savory with a soft, flaky texture that melts in your mouth.",
@@ -121,7 +121,7 @@ export const PRODUCTS: AllProductsType[] = [
         name: "seafood",
         img: "/products/Bolsa-Marisco.png",
         bg: "#d9a3b2",
-        color: "#cba058",
+        color: "#d70321",
         id: "bolsa-marisco",
         food_details:
           "A generous mixed selection of shrimp, squid rings, and mussels — dried and lightly seasoned with sea salt. Rich in zinc, selenium, iodine, and lean protein, making it a nutritional powerhouse for thyroid and immune health. The flavor is briny, oceanic, and mildly sweet with a pleasant chewiness that brings the taste of the sea to any dish.",

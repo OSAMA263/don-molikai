@@ -7,6 +7,21 @@ import LargeText from "@/components/ui/large-text";
 import { Crown } from "@/components/ui/navbar/logo";
 import { ALL_PRODUCTS } from "@/data/products";
 import Image from "next/image";
+import { notFound } from "next/navigation";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  const product = ALL_PRODUCTS.find((pro) => pro.id === id);
+
+  return {
+    title: product?.name.toUpperCase(),
+    description: `Discover ${product?.name}, a delicious food product made with quality ingredients.`,
+  };
+}
 
 export default async function SingleProduct({
   params,
@@ -16,6 +31,8 @@ export default async function SingleProduct({
   const { id } = await params;
 
   const product = ALL_PRODUCTS.find((pro) => pro.id === id);
+
+  if (!product) return notFound();
 
   return (
     <Container>
@@ -47,7 +64,7 @@ export default async function SingleProduct({
         {/* links other products in the category */}
         <ActiveProductLink id={id} color={product?.color} />
 
-        <SlideLine className="w-[60%] text-xl flex-center mx-auto text-center">
+        <SlideLine className="lg:w-[60%] w-[80%] text-xl flex-center mx-auto text-center">
           <Crown />
           {product?.food_details}
         </SlideLine>

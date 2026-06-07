@@ -33,7 +33,7 @@ export default function NavigationBar() {
     <div className="flex justify-between w-[98vw] *:flex *:pt-5 *:gap-6 text-4xl uppercase">
       {/* 4 GOLD LINKS */}
       <>
-        <div>
+        <div className="max-lg:hidden">
           {NAV_LINKS.slice(0, 2).map(({ url, label }) => (
             <MainBtn
               className={`border-b text-xl! ${url == pathname ? "border-gold" : "border-transparent"}`}
@@ -45,7 +45,7 @@ export default function NavigationBar() {
             </MainBtn>
           ))}
         </div>
-        <div>
+        <div className="max-lg:hidden">
           {NAV_LINKS.slice(2, 4).map(({ url, label }) => (
             <MainBtn
               className={`border-b text-xl! ${url == pathname ? "border-gold" : "border-transparent"}`}
@@ -110,7 +110,7 @@ const SliderNavLinks = ({
             <MainBtn
               as="a"
               href={url}
-              className="uppercase w-fit text-9xl *:flex-center *:flex-row *:gap-6"
+              className="uppercase w-fit xl:text-9xl text-5xl *:flex-center *:flex-row *:gap-6"
             >
               {url == pathname && <Crown className="text-gold!" />}
               <span>{label}</span>

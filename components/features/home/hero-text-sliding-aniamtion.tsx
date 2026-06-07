@@ -24,7 +24,7 @@ export default function HeroTextAnimated(props: propsTpypes) {
 
   return (
     <div
-      className={`font-extrabold w-[90%] justify-center text-center mx-auto flex size-full flex-col text-[11rem] leading-none items-center uppercase ${className ?? ""}`}
+      className={`font-extrabold w-[90%] justify-center text-center mx-auto flex size-full flex-col leading-none items-center uppercase ${className ?? ""}`}
     >
       {/* CUSTOM TEXT LAYOUT */}
       {children ? (
@@ -32,7 +32,7 @@ export default function HeroTextAnimated(props: propsTpypes) {
       ) : (
         <>
           <div className="flex items-center gap-10">
-            <div className="text-2xl!">
+            <div className="md:text-2xl! text-sm">
               <SlideChar
                 delay={stagger ? 1.6 : 0}
                 line={left ?? ""}
@@ -43,7 +43,7 @@ export default function HeroTextAnimated(props: propsTpypes) {
 
             <LargeText line={centerText ?? ""} />
 
-            <div className="text-2xl!">
+            <div className="md:text-2xl! text-sm">
               <SlideChar
                 delay={stagger ? 1.6 : 0}
                 line={right ?? ""}

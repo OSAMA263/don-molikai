@@ -6,6 +6,12 @@ import ViewPortSection from "@/components/ui/full-view-section";
 import { Crown } from "@/components/ui/navbar/logo";
 import { PRODUCTS } from "@/data/products";
 
+export const metadata = {
+  title: "Products",
+  description:
+    "Browse our range of premium food products, made with carefully selected ingredients to deliver exceptional taste and quality.",
+};
+
 export default function Products() {
   return (
     <Container>
@@ -15,7 +21,7 @@ export default function Products() {
         className="relative!"
       >
         <HeroTextAnimated
-          className="justify-end text-white pb-20"
+          className="sm:justify-end text-white pb-20"
           centerText="we"
           left="since 1987"
           right="new tradition"

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import ProductTab from "./product-tab";
 import { useProductsTab } from "./useProductsTab";
-import SlideLine from "@/components/animations/slide-line";
+import LargeText from "@/components/ui/large-text";
 
 export default function ProductsViewSection() {
   const {
@@ -24,13 +24,13 @@ export default function ProductsViewSection() {
       }}
     >
       {/* BACKGROUND TEXT */}
-      <div className="size-full flex items-center justify-center flex-col absolute -z-1 text-[12rem] font-extrabold leading-none">
-        <SlideLine>piquillo</SlideLine>
-        <SlideLine>peppers</SlideLine>
+      <div className="size-full flex items-center justify-center flex-col absolute -z-1 font-extrabold leading-none">
+        <LargeText>piquillo</LargeText>
+        <LargeText>peppers</LargeText>
       </div>
 
       {/* TABS */}
-      <div className="flex flex-col items-center justify-evenly h-full">
+      <div className="flex flex-col items-center lg:justify-evenly justify-center max-lg:gap-10 h-full">
         {/* TOP TABS BUTTONS */}
         <ProductTab
           arr={PRODUCTS}
@@ -76,7 +76,7 @@ const ProductImg = ({
         animate={{ x: "0vw" }}
         exit={{ x: "-100vw" }}
         transition={{ duration: 0.4 }}
-        className="min-h-130"
+        className="xl:h-100 md:h-80 h-40"
       >
         <Link
           href={"/products/" + link}
@@ -87,7 +87,7 @@ const ProductImg = ({
             height={100}
             alt={item}
             src={img}
-            className="transition-all duration-500 h-130 w-auto"
+            className="transition-all duration-500 h-full w-auto"
           />
         </Link>
       </motion.div>

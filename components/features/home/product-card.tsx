@@ -6,9 +6,11 @@ import { motion } from "framer-motion";
 
 export default function ProductCard({
   img,
+  i,
   className,
   ...rest
 }: {
+  i: number;
   img: string;
   className?: string;
 }) {
@@ -17,7 +19,7 @@ export default function ProductCard({
       transition={{ duration: 0.6, delay: 0 }}
       viewport={{ once: true, amount: 0.7 }}
       {...rest}
-      className={`w-fit absolute h-[60dvh] rounded-4xl overflow-hidden  ${className ?? ""}`}
+      className={`xl:w-fit md:w-[40%] lg:absolute lg:h-[60dvh] rounded-4xl overflow-hidden ${i == 0 ? "lg:-translate-x-1/2" : "lg:translate-x-1/2"} ${i !== 1 ? "max-lg:hidden" : ""} ${className ?? ""}`}
     >
       <Link
         className="size-full inline-block"

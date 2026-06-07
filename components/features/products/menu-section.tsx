@@ -15,13 +15,13 @@ export default function MenuSection({ ind }: { ind: number }) {
       <HeroTextAnimated {...{ left, right, centerText }} />
       <ViewPortSection
         src={bg}
-        className="w-[70vw]! min-h-[80vh]! h-[80vh]! rounded-2xl overflow-hidden relative! mx-auto"
+        className="lg:w-[70vw]! w-[95%] min-h-[80vh]! h-[80vh]! rounded-2xl overflow-hidden relative! mx-auto"
       />
 
       {/* a details and yapping */}
       <div className="flex-center gap-6">
         <Crown />
-        <SlideLine className="w-[60%] mx-auto font-extrabold! uppercase text-center">
+        <SlideLine className="lg:w-[60%] mx-auto font-extrabold! uppercase text-center">
           {yapping_with_crown}
         </SlideLine>
       </div>

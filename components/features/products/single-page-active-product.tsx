@@ -13,7 +13,7 @@ export default function ActiveProductLink({
   );
 
   return (
-    <div className="flex-center gap-8 flex-row uppercase font-extrabold text-2xl">
+    <div className="flex-center gap-8 flex-row uppercase font-extrabold sm:text-2xl">
       {restCategoryProducts?.menu.map((pro) => (
         <MainBtn
           as="a"

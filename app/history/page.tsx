@@ -6,8 +6,13 @@ import ViewPortSection from "@/components/ui/full-view-section";
 import { HISTORY_DATA } from "@/data/history-data";
 import { ALL_PRODUCTS } from "@/data/products";
 
-export default function History() {
+export const metadata = {
+  title: "Our History",
+  description:
+    "Learn the story behind our food brand, our passion for quality, and the traditions that inspire every product we create.",
+};
 
+export default function History() {
   return (
     <Container>
       <ViewPortSection
@@ -15,7 +20,7 @@ export default function History() {
         src="/hero/ABOUT_HERO.jpg"
       >
         <HeroTextAnimated
-          className="justify-end pb-10 text-white!"
+          className="sm:justify-end pb-10 text-white!"
           left="2023"
           right="2026"
           centerText="innovation"
@@ -58,7 +63,10 @@ export default function History() {
             {i == HISTORY_DATA.length - 1 && (
               <>
                 {/* SCROLL X ON MOUSE MOVE */}
-                <ScrollXOnMouseMove arr={ALL_PRODUCTS} className="pt-0!" />
+                <ScrollXOnMouseMove
+                  arr={ALL_PRODUCTS}
+                  className="pt-0!"
+                />
               </>
             )}
           </ViewPortSection>

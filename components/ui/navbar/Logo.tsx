@@ -10,8 +10,8 @@ export default function Logo() {
   const { shrinkLogo } = useNavbarContext();
 
   return (
-    <Link href="/" className="[&_h2]:text-7xl!">
-      {/* bom */}
+    <Link href="/" className="lg:[&_h2]:text-7xl! text-5xl!">
+      {/* don */}
       {/* TOP TEXT IN THE LOGO */}
       <div className=" flex-center flex-row [&>div]:flex-center [&>div]:text-xs [&>div]:leading-none gap-1">
         <div>
@@ -42,7 +42,7 @@ export default function Logo() {
             init={false}
             condation={shrinkLogo}
             y="100%"
-            line="bom"
+            line="don"
           />
         </h2>
         <div>
@@ -108,7 +108,7 @@ export default function Logo() {
           init={false}
           condation={shrinkLogo}
           y="100%"
-          line="olicaio"
+          line="olikai"
         />
       </h2>
     </Link>

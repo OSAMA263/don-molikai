@@ -11,7 +11,7 @@ export default function LargeText({
   return (
     <SlideChar
       line={children ?? ""}
-      className={`2xl:text-[10rem] xl:text-9xl ${className ?? ""}`}
+      className={`2xl:text-[10rem] md:text-8xl sm:text-6xl text-5xl ${className ?? ""}`}
       {...rest}
     />
   );

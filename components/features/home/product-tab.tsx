@@ -16,7 +16,7 @@ export default function ProductTab({
   item,
 }: PropsTypes) {
   return (
-    <div className="flex items-center gap-15 text-2xl">
+    <div className="flex items-center lg:gap-15 gap-8 lg:text-2xl">
       {arr.map(({ name }, i) => (
         <Fragment key={name}>
           <MainBtn
