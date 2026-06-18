@@ -26,7 +26,7 @@ export default function MainBtn({
       <Link
         href={rest.href ?? "#"}
         style={style}
-        target={blank ? "_blank" : "_parent"}
+        target={blank ? "_blank" : ""}
         rel="noopener noreferrer"
         className={classes}
       >
